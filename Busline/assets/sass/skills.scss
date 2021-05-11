@@ -1,0 +1,114 @@
+@import './variable.scss';
+
+/* skills section css start */
+.skills-wrapper {
+  .row {
+    align-items: center;
+  }
+}
+
+.skills-content-block {
+  .skills-title {
+    color: $color-defult1;
+    font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(32px + (46 - 32) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 13px;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 50px;
+  }
+  .progress-outer-block {
+    text-align: left;
+    .progress-title {
+      position: relative;
+      text-transform: capitalize;
+      margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 400;
+    }
+    .progressbar-wrapper {
+      margin-bottom: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .progressbar-title {
+        color: $color-black;
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 400;
+        position: relative;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+/* responsive css */
+@media (min-width: 992px) {
+  .skills-image {
+    text-align: left;
+    img {
+      max-width: 90%;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .skills-image {
+    display: none;
+  }
+  .skills-content-block {
+    .skills-subtitle {
+      line-height: normal;
+    }
+  }
+}
+
+/* skills section css end */
+.progress-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #011627;
+  margin: 0 0 20px;
+}
+.progress {
+  height: 8px;
+  background-color: #efefef;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  .progress-bar {
+    box-shadow: none;
+    position: relative;
+    overflow: visible;
+    -webkit-animation: animate-positive 4s;
+    animation: animate-positive 4s;
+    &:after {
+      position: absolute;
+      content: '';
+      top: -6px;
+      right: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+  }
+  .progress-value {
+    font-weight: 400;
+    color: #777777;
+    font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+    display: block;
+    width: auto;
+    padding: 0;
+    height: auto;
+    position: absolute;
+    top: -32px;
+    right: 0;
+  }
+}
+@keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+/* skills section css end */
